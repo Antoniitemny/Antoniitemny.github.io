@@ -4,21 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
-    <title>Main page</title>
+    <title>Mr.Burger</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/fav//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/fav//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/fav//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/fav//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/fav//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/fav//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/fav//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/fav//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/fav//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/fav//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/fav//favicon-16x16.png">
+    <link rel="manifest" href="img/icons/fav//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/icons/fav//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!--Оболочка-->
     <div class="wrapper">
+        <!--Контент, постоянно на странице-->
         <div class="maincontent">
+            <!--Стартовая часть-->
             <section class="section start">
                 <div class="container">
+                    <!--Header-->
                     <header class="header">
+                        <!--Лого-->
                         <div class="header__logo">
-                            <a href="#" class="logo"></a>
+                            <a href="#" class="logo">
+                                <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!--Сука, не работает-->
+                                    <use href="img/icons/logo.svg"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!--Навигация по сайту-->
+                        <div class="header__btns">
+                            <div class="header__nav">
+                                <!--Отображается только на десктопе-->
+                                <nav class="nav">
+                                    <ul class="nav__list">
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="1">о нас</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="2">бургеры</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="3">команда</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="4">меню</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="5">отзывы</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a class="nav__link" href="" data-scroll-to="7">контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header__links">
+                                <a class="order-link btn" href="" data-scroll-to="6">Заказать</a>
+                                <!--Отображается в мобильных версиях-->
+                                <a class="hamburger-menu-link" href="">
+                                    <div class="hamburger-menu-link__bars"></div>
+                                </a>
+                            </div>
                         </div>
                     </header>
-                    <div class=""></div>
+                    <div class="start__container">
+                        <div class="start__content">
+                            <div class="start__left">
+                                <img class="start__img" src="img/start-burger.png" alt="Бургер">
+                                <svg>
+
+                                </svg>
+                            </div>
+                            <div class="start__right">
+                                <div class="section__title">Мы делаем</div>
+                                <div class="start__desc">Натуральные бургеры</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <a href="#" class="down-arrow" data-scroll-to="1">
+                    <svg class="down-arrow__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-scroll" ></use>
+                    </svg>
+                </a>
             </section>
         </div>
     </div>
