@@ -1,0 +1,47 @@
+.nav {
+    display: flex;
+    flex: 1;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 0 16px;
+    }
+}
+
+.nav__link, .btn {
+    @include ubuntu (medium);
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.btn {
+    padding: 9px 16px;
+    border-radius: 7px;
+    background: $red;
+}

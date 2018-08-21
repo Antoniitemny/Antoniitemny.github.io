@@ -1,0 +1,40 @@
+.best {
+    background: url('img/backgrounds/2bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.best__list {
+    display: flex;
+    align-items: flex-start;
+}
+
+.best__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+.best__desc {
+    text-align: center;
+}
+
+.best__title {
+    @include lifehack();
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.best__text {
+    @include ubuntu();
+
+}
+
+.best__icon {
+    margin-bottom: 30px;
+}
+
+.best__icon-pic {
+    height: 90px;
+}

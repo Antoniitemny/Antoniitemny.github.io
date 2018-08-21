@@ -10,8 +10,15 @@ $laptop: 992px;
 $tablets: 768px;
 $phones: 480px;
 
+// setups
+@import 'css/misc/normalise.scss';
+@import 'css/misc/fonts.scss';
+@import 'css/misc/layout.scss';
 
-@import url('css/misc/normalise.scss');
-@import url('css/misc/fonts.scss');
-
-@import url('css/blocks/start.scss')
+// blocks
+@import 'css/blocks/start.scss';
+@import 'css/blocks/header.scss';
+@import 'css/blocks/nav.scss';
+@import 'css/blocks/best.scss';
+@import 'css/blocks/review.scss';
+@import 'css/blocks/order.scss';

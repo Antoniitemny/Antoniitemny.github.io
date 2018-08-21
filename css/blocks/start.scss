@@ -1,5 +1,39 @@
 .start {
-    background-image: url("../../img/backgrounds/1bg.jpg") center center no-repeat;
+    background: url('img/backgrounds/1bg.jpg') center center no-repeat;
     background-size: cover;
     position: relative;
+    
+}
+
+.start__container {
+    display: flex;
+    flex: .8;
+    padding-left: 2%;
+}
+
+.start__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.start__left, .start__right {
+    width: 50%;
+    align-items: center
+}
+
+.start__img {
+    margin-top: -45px;
+}
+
+.start__desc {
+    @include lifehack();
+    font-size: 65px;
+    color: #fff;
+    line-height: .9;
+    margin-top: -40px;
+}
+
+.down-arrow {
+    position: absolute;
 }
