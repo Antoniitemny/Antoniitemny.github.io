@@ -3,59 +3,102 @@
     background-size: cover;
     display: flex;
     align-items: center;
+
     .title {
-      text-align: center;
+
+        @include tablets {
+            margin-bottom: rem(15px);
+        }
+        @include phones {
+            font-size: rem(55px);
+            margin-bottom: rem(15px);
+            line-height: 1.2;
+        }
     }
 }
 
 .order__form {
     margin-left: -5%;
     display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .order__form-col {
     width: 45%;
     margin-left: 5%;
+    @include tablets {
+        width: 60%;
+    }
+    @include phones {
+        width: 95%;
+        &:last-child {
+            .order__form-row {
+                margin-bottom: rem(30px);
+            }
+        }
+    }
 }
 
 .order__form-row {
-    margin-bottom: 16px;
+    margin-bottom: rem(16px);
     display: flex;
-    margin-left: -10px
+    margin-left: rem(-10px);
+    @include phones {
+        justify-content: center;
+    }
   }
 
+.order__form-buttons {
+    padding-left: rem(10px);
+}
+
 .order__form-label {
-    margin-bottom: 17px;
+    margin-bottom: rem(5px);
     @include ubuntu();
     color: #fff;
-    font-size: 14px;
+    font-size: rem(14px);
 }
 
 .order__form-block {
     display: block;
     width: 100%;
     flex: 1;
-    margin-left: 10px;
+    margin-left: rem(10px);
+}
+
+.order__form-block--hidden {
+    @include phones{
+        display: none;
+    }
 }
 
 .order__form-input {
-    font-size: 14px;
-    padding: 10px;
-    padding: 5px 10px;
-    border: 1px solid #d1cfcb;
-    border-radius: 5px;
+    font-size: rem(14px);
+    padding: rem(5px) rem(10px);
+    border: rem(1px) solid #d1cfcb;
+    border-radius: rem(5px);
     width: 100%;
 }
 
+.order__form-input:focus {
+    outline: none;
+    padding: rem(4px) rem(9px);
+    border: rem(2px) solid $yellow; 
+}
+
 .order__form-input_textarea {
-    height: 110px;
+    height: rem(110px);
     resize: none;
 }
   
 .order__radio {
     position: relative;
     white-space: nowrap;
-    margin-right: 20px;
+    margin-right: rem(20px);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -64,12 +107,12 @@
 .order__radio-elem {
     position: absolute;
     top: 0;
-    left: -9999px;
+    left: rem(-9999px);
 }
 
 .order__radio-fake {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     background: #fff;
     position: relative;
@@ -77,8 +120,8 @@
       content: "";
       display: block;
       position: absolute;
-      width: 0px;
-      height: 0px;
+      width: rem(0px);
+      height: rem(0px);
       border-radius: 50%;
       background: $red;
       top: 50%;
@@ -91,21 +134,21 @@
 .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        width: 8px;
-        height: 8px;
+        width: rem(8px);
+        height: rem(8px);
       }
     }
 }
 
 .order__radio-title {
-    font-size: 14px;
+    font-size: rem(14px);
     color: #fff;
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .order__radio_checkbox {
     .order__radio-fake {
-      border-radius: 0px;
+      border-radius: rem(0px);
     }
     .order__radio-elem {
         &+.order__radio-fake {
@@ -117,25 +160,25 @@
     .order__radio-elem:checked {
         &+.order__radio-fake {
           &:after {
-            background: url("../../img/icons/check.svg") 50% no-repeat transparent;
+            background: url("img/icons/check.svg") 50% no-repeat transparent;
             background-size: contain;
-            width: 11px;
-            height: 9px;
+            width: rem(11px);
+            height: rem(9px);
           }
         }
     }
 }  
 
 .order__form-button {
-    margin-right: 20px;
+    margin-right: rem(20px);
     border: 0;
     background: $red;
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: rem(5px);
     color: #ffffff;
     @include ubuntu(middle);
-    padding: 10px 15px;
+    padding: rem(10px) rem(15px);
     cursor: pointer;
   }
   

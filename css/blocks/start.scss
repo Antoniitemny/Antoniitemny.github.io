@@ -9,31 +9,85 @@
     display: flex;
     flex: .8;
     padding-left: 2%;
+    justify-content: center;
 }
 
 .start__content {
     display: flex;
+    height: 100%;
     justify-content: flex-start;
     align-items: center;
+    
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.start__left {
+    margin-right: 1%;
+    margin-top: rem(-40px);
+}
+
+.start__right{
+    .title {
+        margin-bottom: 1.7rem;
+    }
 }
 
 .start__left, .start__right {
     width: 50%;
-    align-items: center
+    align-items: center;
+
+    @include tablets {
+        text-align: center;
+        width: auto;
+        max-width: rem(600px);
+            &.start__left {
+                width: rem(425px);
+            }
+        }
+    @include phones {
+        width: auto;
+            &.start__left {
+                width: rem(380px);
+            }
+    }
+
 }
 
 .start__img {
-    margin-top: -45px;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+
 }
 
 .start__desc {
     @include lifehack();
-    font-size: 65px;
+    font-size: rem(65px);
     color: #fff;
     line-height: .9;
-    margin-top: -40px;
+    text-transform: lowercase;
 }
 
 .down-arrow {
     position: absolute;
+    bottom: rem(20px);
+    left: 50%;
+    width: rem(60px);
+    height: rem(60px);
+    transform: translateX(-50%);
+    transition: .3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+        &:hover {
+        width: rem(45px);
+        height: rem(45px);
+      }
 }
+

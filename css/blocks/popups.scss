@@ -1,0 +1,64 @@
+.review-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#2f3234, .92);
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	display: none;
+	transition: opacity .3s;
+
+&_visible {
+	display: flex;
+	opacity: 1;
+}
+}
+
+.full-review {
+	padding: rem(25px) rem(20px);
+	width: 50%;
+	background: #fff;
+	border-radius: rem(5px);
+	position: relative;
+}
+
+.full-review__title {
+	@include gagalin;
+	font-size: rem(14px);
+	text-transform: uppercase;
+	margin-bottom: rem(25px);
+}
+
+.full-review__content {
+	font-size: rem(14px);
+	@include ubuntu();
+}
+
+.full-review__close {
+	width: rem(15px);
+	height: rem(15px);
+	display: block;
+	position: absolute;
+	right: rem(20px);
+	top: rem(20px);
+	opacity: .7;
+	transition: .3s;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+
+		use {
+			fill: $red;
+		}
+	}
+}
+

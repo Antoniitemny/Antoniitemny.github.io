@@ -1,17 +1,16 @@
 //colors
-$orange: #e45028;
+$orange: #f08c33;
 $yellow: #f9b43b;
 $black: #2f3234;
-$red: #e35028;
+$red: #e45028;
 
 // resolutions
-$desktop: 1200px;
-$laptop: 992px;
 $tablets: 768px;
 $phones: 480px;
 
 // setups
 @import 'css/misc/normalise.scss';
+@import 'css/misc/media.scss';
 @import 'css/misc/fonts.scss';
 @import 'css/misc/layout.scss';
 
@@ -22,3 +21,11 @@ $phones: 480px;
 @import 'css/blocks/best.scss';
 @import 'css/blocks/review.scss';
 @import 'css/blocks/order.scss';
+@import 'css/blocks/team.scss';
+@import 'css/blocks/hamburger-menu-link.scss';
+@import 'css/blocks/fixed-menu.scss';
+@import 'css/blocks/team-acco.scss';
+@import 'css/blocks/menu.scss';
+@import 'css/blocks/menu-acco.scss';
+@import 'css/blocks/hamburger-menu.scss';
+@import 'css/blocks/popups.scss';

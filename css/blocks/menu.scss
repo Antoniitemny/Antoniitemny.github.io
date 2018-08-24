@@ -1,0 +1,10 @@
+.menu {
+	background: url('img/backgrounds/5bg.jpg') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+	.title {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+	}
+}

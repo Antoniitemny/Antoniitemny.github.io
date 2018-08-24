@@ -2,11 +2,29 @@
     background: url('img/backgrounds/2bg.jpg') center center no-repeat;
     background-size: cover;
     position: relative;
+
+    .container {
+        @include phones {
+            padding-top: 15%;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    .title {
+        @include phones {
+            font-size: rem(60px);
+            margin-bottom: rem(20px);
+        }
+    }
 }
 
 .best__list {
     display: flex;
-    align-items: flex-start;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .best__item {
@@ -14,27 +32,46 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 rem(10px);
+
+    @include phones{
+        flex-direction: row;
+        margin-bottom: rem(10px);
+    }
 }
+.best__icon {
+    margin-bottom: rem(30px);
+
+    @include phones {
+        flex: 1;
+    }
+}
+
+.best__icon-pic {
+    width: 90%;
+    height: rem(100px);
+    svg {
+        max-width: 95%;
+      }
+}
+
 .best__desc {
     text-align: center;
+    @include phones{
+        text-align: start;
+        flex: 3;
+    }
 }
 
 .best__title {
     @include lifehack();
-    font-size: 24px;
-    margin-bottom: 25px;
+    font-size: rem(24px);
+    margin-bottom: rem(15px);
+    line-height: 1.3;
 }
 
 .best__text {
     @include ubuntu();
-
+    font-size: rem(14px);
 }
 
-.best__icon {
-    margin-bottom: 30px;
-}
-
-.best__icon-pic {
-    height: 90px;
-}
