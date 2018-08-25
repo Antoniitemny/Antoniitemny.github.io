@@ -1401,6 +1401,12 @@ footer {
   transform: rotate(-180deg);
 }
 
+.team-acco__item.active .team-acco__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .team-acco__trigger {
   color: #fff;
   font-size: 1.07692rem;
@@ -1443,9 +1449,6 @@ footer {
 }
 
 .team-acco__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 3.07692rem;
   display: none;
 }
@@ -1530,29 +1533,84 @@ footer {
   left: 10%;
 }
 
-.menu-acco {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.menu-acco {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .menu-acco__item {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.menu-acco__item.active {
+  -webkit-box-flex: .6;
+  -ms-flex: .6;
+  flex: .6;
 }
 
 .menu-acco__item.active .menu-acco__trigger-text {
   color: #f9b43b;
 }
 
+.menu-acco__item.active .menu-acco__text {
+  display: block;
+}
+
+.menu-acco__item.active .menu-acco__content {
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .menu-acco__item.active .menu-acco__content .menu__close {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-acco__item.active {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-acco__item.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 105;
+  }
+}
+
 .menu-acco__trigger {
   width: 6.15385rem;
+  min-width: 6.15385rem;
   display: block;
   height: 100%;
-  float: left;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1591,7 +1649,6 @@ footer {
 
 .menu-acco__content {
   height: 100%;
-  float: left;
   background: rgba(47, 50, 52, 0.93);
   width: 0;
   overflow: hidden;
@@ -1606,6 +1663,33 @@ footer {
   width: 100%;
   line-height: 1.8;
   display: none;
+}
+
+.menu__close {
+  width: 1.53846rem;
+  height: 1.53846rem;
+  display: none;
+  position: absolute;
+  right: 2.46154rem;
+  top: 1.92308rem;
+  opacity: .7;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.menu__close:hover {
+  opacity: 1;
+}
+
+.menu__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.menu__close svg use {
+  fill: #c1c2c2;
 }
 
 .hamburger-menu {
@@ -1799,4 +1883,28 @@ footer {
 
 .full-review__close svg use {
   fill: #e45028;
+}
+
+.burger {
+  background: #f9b43b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(40%, #eb8c38), color-stop(60%, #eb8c38), color-stop(60%, #eb8c38), to(#f9b43b));
+  background: -o-linear-gradient(top, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 );
+  /* IE6-9 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
