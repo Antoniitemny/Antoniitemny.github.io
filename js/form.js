@@ -1,4 +1,4 @@
-var myForm = document.querySelector('#order-form');
+const myForm = document.querySelector('#order-form');
 const successM = document.querySelector('#success');
 const error = document.querySelector('#error');
 const send = document.querySelector('#send');
