@@ -506,6 +506,10 @@ footer {
   box-sizing: border-box;
 }
 
+.fp-tableCell {
+  padding-top: 0 !important;
+}
+
 .start {
   background: url("img/backgrounds/1bg.jpg") center center no-repeat;
   background-size: cover;
