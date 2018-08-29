@@ -1,0 +1,36 @@
+.video {
+    background: url('img/backgrounds/7bg.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+  
+    .container {
+      align-items: center;  
+    }
+}
+
+.player {
+    position: relative;
+}
+
+.player__controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rem(35px);
+    background: #3e3e3e;
+}
+
+.player__play {
+    display: flex;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.play-img {
+    fill: #626262;
+    height:rem(36px);
+    width: rem(40px);
+}

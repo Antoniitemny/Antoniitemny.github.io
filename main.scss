@@ -13,7 +13,7 @@ $phones: 480px;
 @import 'css/misc/media.scss';
 @import 'css/misc/fonts.scss';
 @import 'css/misc/layout.scss';
-
+@import 'css/misc/fullpage.css';
 // blocks
 @import 'css/blocks/start.scss';
 @import 'css/blocks/header.scss';
@@ -30,3 +30,9 @@ $phones: 480px;
 @import 'css/blocks/hamburger-menu.scss';
 @import 'css/blocks/popups.scss';
 @import 'css/blocks/burger.scss';
+@import 'css/blocks/footer.scss';
+@import 'css/blocks/socials.scss';
+@import 'css/blocks/burger-slide.scss';
+@import 'css/blocks/burger-dropdown.scss';
+@import 'css/blocks/map.scss';
+@import 'css/blocks/video.scss';

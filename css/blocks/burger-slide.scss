@@ -1,0 +1,151 @@
+.fp-tableCell {
+	display: flex;
+    align-items: center;
+    position: relative;
+    height: 80%;
+
+    @include tablets() {
+        flex-direction: column;
+        justify-content: center;
+
+        .kkal {
+            top: 10%;
+            right: 10%;
+            left: initial;
+        }
+        .dropdown {
+            top: 10%;
+            left: 10%;
+        }
+
+        .burger__col {
+            width: 80%;
+            height: 30%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            
+        }
+    }
+    @include phones() {
+        padding-top: rem(50px);
+        .burger__col {
+            width: 100%;
+
+            .burger__title {
+                font-size: rem(50px);
+                width: 80%;
+                margin-bottom: rem(30px);
+            }
+            .burger__text {
+                line-height: 1.7;
+            }
+        }
+        .kkal {
+            right: 0;
+        }
+        .dropdown{
+            left: 0;
+        }
+    }
+}
+.burger__col {
+    width: 50%;
+}
+
+.burger__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.burger__title {
+    line-height: 1;
+    margin-bottom: rem(40px);
+}
+
+.burger__text {
+    @include ubuntu ();
+    font-size: rem(14px);
+    color: #fff;
+    margin-bottom: rem(15px);
+}
+
+.burger__order {
+    display: flex;
+    align-items: baseline;
+}
+
+.burger__price {
+    @include gagalin();
+    color: $red;
+    
+    &--number {
+        font-size: rem(50px);
+        margin-right: rem(5px);
+    }
+
+    &--currency {
+        font-size: rem(20px);
+        margin-right: rem(20px);
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: rem(90px);
+    height: rem(90px);
+    background: $orange;
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(7px);
+    cursor: pointer;
+
+    .dropdown__icon {
+        width: rem(50px);
+    }
+
+    .dropdown__text {
+        color: #fff;
+        @include gagalin();
+        font-size: rem(15px);
+    }
+    &:hover {
+        .composition__dropdown {
+            display: flex;
+        }
+    }
+}
+
+.kkal {
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    width: rem(90px);
+    height: rem(90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(7px);
+}
+
+.kkal__icon {
+    opacity: .5;
+}
+
+.kkal__num, .kkal__text {
+    @include gagalin();
+    color: #fff;
+    opacity: .5;
+}
+
+.kkal__num {
+    position: absolute;
+    top: 35%;
+    font-size: rem(20px);
+}

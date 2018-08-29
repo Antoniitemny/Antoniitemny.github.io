@@ -1,0 +1,46 @@
+.composition__dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    padding: rem(15px);
+    background: #ffffff;
+    border-radius: rem(5px);
+    opacity: .9;
+    display: none;
+}
+
+.composition__item {
+    display: flex;
+    height: rem(40px);
+    width: rem(250px);
+    align-items: center;
+    margin-bottom: rem(15px);
+}
+
+.composition__icon {
+    height: rem(35px);
+    width: rem(40px);
+    margin-right: rem(15px);
+}
+
+.composition__icon-pic {
+    width: 100%;
+    height: 100%;
+}
+
+.composition__weight {
+    @include ubuntu(medium);
+    font-size: rem(14px);
+    width: rem(50px);
+    text-align: end;
+}
+
+.composition__name {
+    @include ubuntu(medium);
+    font-size: rem(14px);
+    flex: 1;
+}
+

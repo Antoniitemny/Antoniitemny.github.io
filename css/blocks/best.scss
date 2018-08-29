@@ -50,7 +50,7 @@
 .best__icon-pic {
     width: 90%;
     height: rem(100px);
-    svg {
+    use {
         max-width: 95%;
       }
 }

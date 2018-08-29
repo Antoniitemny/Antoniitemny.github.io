@@ -5,6 +5,57 @@
 	background: linear-gradient(to bottom,  #f9b43b 0%,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+
+	@include tablets() {
+		.arrow {
+			min-width: rem(60px);
+			max-width: rem(60px);
+		}
+	}
+	@include phones() {
+		.arrow {
+			min-width: rem(35px);
+			max-width: rem(35px);
+		}
+	}
 }
+
+.arrow {
+	min-width: rem(80px);
+	max-width: rem(80px);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	
+	&--right {
+		justify-content: flex-start;
+	}
+}
+
+.arrow__link {
+	width: rem(30px);
+	height: 100%;
+	transition: .3s;
+
+	&:hover {
+		width: rem(45px);
+	}
+}
+
+.arrow__icon {
+	width: 100%;
+	height: 100%;
+
+	&--left {
+		transform: rotate(90deg);
+	}
+	&--right {
+		transform: rotate(-90deg);
+	}
+}
+
+
+

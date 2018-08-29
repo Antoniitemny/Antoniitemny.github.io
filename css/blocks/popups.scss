@@ -1,4 +1,4 @@
-.review-popup {
+.review-popup, .status-popup {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -7,8 +7,8 @@
 	background: rgba(#2f3234, .92);
 	align-items: center;
 	justify-content: center;
-	z-index: 100;
 	display: none;
+	z-index: 100;
 	transition: opacity .3s;
 
 &_visible {
@@ -17,7 +17,7 @@
 }
 }
 
-.full-review {
+.full-review, .status-popup__inner {
 	padding: rem(25px) rem(20px);
 	width: 50%;
 	background: #fff;
@@ -62,3 +62,17 @@
 	}
 }
 
+.status-popup__inner {
+	padding: rem(20px);
+	text-align: center;
+	width: rem(200px);
+}
+
+.status-popup__message {
+	margin-bottom: rem(20px);
+	font-size: rem(14px);
+}
+
+.error {
+	color: $red;
+}

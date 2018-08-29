@@ -1,9 +1,9 @@
 .fixed-menu {
 	position: fixed;
-	top: rem(90px);
+	top: rem(70px);
 	right: rem(40px);
   	z-index: 90;
-  
+	display: none;
   	@include tablets {
     	display: none;
   	}
@@ -63,4 +63,10 @@
 
 .fixed-menu__item {
 	margin-bottom: rem(5px);
+}
+
+#fp-nav {
+	@include tablets() {
+		display: none;
+	}
 }
