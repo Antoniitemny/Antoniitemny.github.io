@@ -3,7 +3,8 @@ $(document).ready(function() {
         anchors: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9'],
         autoScrolling:true,
         scrollHorizontally: true,
-        navigation: true
+        navigation: true,
+        recordHistory: false
     });
 
     $.fn.fullpage.setScrollingSpeed(450);

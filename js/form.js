@@ -20,8 +20,8 @@ send.addEventListener('click', function(event) {
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(JSON.stringify(data));
         xhr.addEventListener('load', () => {
-            console.log(xhr.response.status);
-        });//Что-то непонятное с ответом от сервера. Статус запроса 302, 
+            console.log(xhr.response);
+        });//Ни хрена не понял. Что-то непонятное с ответом от сервера. Статус запроса 302, ответ от сервера null. Изначально вообще cors ругался.
 //        successM.classList.add('status-popup_visible');
      }
 
