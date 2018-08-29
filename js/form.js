@@ -16,12 +16,12 @@ send.addEventListener('click', function(event) {
         }
         
         const xhr = new XMLHttpRequest();
-//        xhr.responseType = 'json';
+        xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(JSON.stringify(data));
-//        xhr.addEventListener('load', () => {
-//            console.log(xhr.response);
-//        });
+        xhr.addEventListener('load', () => {
+            console.log(xhr.response);
+        });
 //        successM.classList.add('status-popup_visible');
      }
 
