@@ -39,6 +39,17 @@ function init() {
             myMap.geoObjects.add(placemark);
     });
 
+const content = document.querySelector("#map");
+const footer = document.querySelector(".footer");
+
+function mapHeight() {
+    let footerStyle = getComputedStyle(footer)
+    content.style.height = `calc(100vh - ${footerStyle.height})`
+}
+
+mapHeight();
+    
+    
 /*    var placemark = new ymaps.Placemark([59.97341330, 30.31076631], {
     },
     {
