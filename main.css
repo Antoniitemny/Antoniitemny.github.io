@@ -499,6 +499,7 @@ p {
 footer {
   position: relative;
   width: 100%;
+  height: min-content;
 }
 
 * {
@@ -2448,3 +2449,4 @@ footer {
   height: 2.76923rem;
   width: 3.07692rem;
 }
+
